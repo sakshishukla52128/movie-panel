@@ -1,0 +1,59 @@
+/* src/pages/TopRatedPage.css */
+.top-rated-page {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .top-rated-page h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  .movie-grid .movie-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 250px;
+    transition: transform 0.2s ease;
+  }
+  
+  .movie-grid .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .movie-card .movie-info {
+    padding: 1rem;
+  }
+  
+  .movie-card .movie-info h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .movie-card .movie-info p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .movie-card .movie-info .rating {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff8c00;
+  }
+  
