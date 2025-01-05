@@ -1,7 +1,6 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -31,6 +30,7 @@ const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="/upcoming">Upcoming</a>
             </li>
+           
           </ul>
           <form onSubmit={handleSearch} className="d-flex ms-3">
             <input

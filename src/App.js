@@ -7,8 +7,12 @@ import TopRatedPage from './pages/TopRatedPage';
 import UpcomingPage from './pages/UpcomingPage';
 import MovieDetailPage from './pages/MovieDetailPage';
 import SearchPage from './pages/SearchPage';
+import SearchResultsPage from './pages/SearchResultsPage';
+
+
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   return (
@@ -20,6 +24,10 @@ const App = () => {
         <Route path="/upcoming" element={<UpcomingPage />} />
         <Route path="/movie/:id" element={<MovieDetailPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/search" element={<SearchResultsPage />} />
+   
+       
+     
       </Routes>
     </Router>
   );

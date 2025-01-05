@@ -1,50 +1,85 @@
-/* src/components/Navbar.css */
-
+/* General Navbar Styling */
 .navbar {
-    border-bottom: 2px solid #3c69dc;  /* Border for a sleek look */
+    border-bottom: 2px solid #3c69dc; /* Sleek bottom border */
+    background-color: #00004d; /* Dark navy background */
+    padding: 0.8rem 1rem;
   }
   
   .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
     color: #fff !important;
-    text-transform: uppercase;  /* Make it look more modern */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds a modern touch */
   }
   
   .navbar-nav .nav-link {
     font-size: 1.1rem;
-    padding: 0.5rem 1rem;
+    color: #ffffff;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Slight highlight */
     border-radius: 5px;
+    color: #f9c846; /* Golden hover effect */
   }
   
   .navbar-toggler {
-    border-color: #fff;
+    border: none;
   }
   
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 30 30"%3E%3Cpath stroke="none" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+  }
+  
+  /* Search Bar */
   .form-control {
     width: 250px;
     border-radius: 25px;
     transition: all 0.3s ease;
+    border: 1px solid #ddd;
   }
   
   .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(14, 17, 20, 0.5);  /* Blue focus outline */
-    border-color: #010b15;
+    box-shadow: 0 0 5px rgba(14, 17, 20, 0.5); /* Subtle glow effect */
+    border-color: #f9c846; /* Matches hover effect color */
+    outline: none;
   }
   
+  /* Search Button */
   .btn-light {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #00004d;
     border-radius: 25px;
     padding: 0.5rem 1.5rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
   }
   
   .btn-light:hover {
-    background:linear-gradient(rgb(77, 77, 142),white);
-    color: #fff;
+    background: linear-gradient(rgb(77, 77, 142), white);
+    color: #f9c846;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .navbar-nav .nav-link {
+      margin-right: 0;
+      text-align: center;
+      padding: 0.8rem 1rem;
+    }
+  
+    .form-control {
+      width: 100%; /* Full width for smaller screens */
+      margin-bottom: 1rem;
+    }
   }
   

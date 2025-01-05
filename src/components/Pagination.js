@@ -1,9 +1,7 @@
-// src/components/Pagination.js
 import React from 'react';
 import './Pagination.css';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-  // Ensuring that pages array includes page numbers dynamically based on totalPages.
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
 
   const handlePageChange = (page) => {
@@ -19,7 +17,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         disabled={currentPage === 1}
         onClick={() => handlePageChange(currentPage - 1)}
       >
-        Prev
+        &laquo; {/* Left arrow */}
       </button>
 
       {pages.map((page) => (
@@ -37,7 +35,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         disabled={currentPage === totalPages}
         onClick={() => handlePageChange(currentPage + 1)}
       >
-        Next
+        &raquo; {/* Right arrow */}
       </button>
     </div>
   );
